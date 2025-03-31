@@ -6,10 +6,10 @@ class Solution {
         int count =0;
       for(int i=0 ; i<nums.length;i++){
         prefixSum+=nums[i];
-                if(hmap.containsKey(prefixSum-k))
+        if(hmap.containsKey(prefixSum-k))
         count+=hmap.get(prefixSum-k);
         hmap.put(prefixSum,hmap.getOrDefault(prefixSum,0)+1);
-
+        
       } 
 return count;
     }
